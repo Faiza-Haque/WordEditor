@@ -21,6 +21,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'WordEditor',
+        inject: true,
       }),
       new WebpackPwaManifest({
         name: 'WordEditor',
@@ -41,7 +42,7 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: './src-sw.js',
+        swDest: 'src-sw.js',
       })
     ],
 
@@ -61,7 +62,13 @@ module.exports = () => {
             }
           }
         },
-
+        {
+          test: /\.(png|jpeg|jpg|svg|gif|webp)$/i,
+          type: "asset/resource",
+          generator: {
+            filename: "images/[name].[hash][ext]",
+          },
+        }
       ],
     },
   };
