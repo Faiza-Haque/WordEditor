@@ -2,6 +2,13 @@
 
 WordEditor is a Progressive Web Application (PWA) designed to function both online and offline, allowing users to create and edit text documents. This application uses modern web technologies including Webpack, Workbox, IndexedDB, and Babel.
 
+## Deployed Link
+[WordEditor](https://wordeditor-7f6j.onrender.com)
+
+## Screenshots
+![Screenshots](./screenshots/wordeditor.png)
+
+
 ## Features
 
 - **PWA Capabilities**: Installable on desktop and mobile devices, with offline functionality.
